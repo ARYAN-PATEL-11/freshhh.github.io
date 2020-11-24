@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: url('https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+            color: azure;  
+            background-repeat: no-repeat;
+            background-size: cover;     
+        }
+        .left{
+            
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            display: inline-block;
+            
+        }
+        .left img{
+            margin: 5px 5px;
+            margin-left: 25px;
+            width: 25%;
+            cursor: pointer;
+        }
+        .left div{
+            margin-left: -193px;
+            text-align: center;
+            font-family: 'Architects Daughter', cursive;
+        }
+        .mid{
+            /*border: 2px solid;
+            border-color: rgb(255, 0, 200);*/
+            display: block;
+            width: 500px;
+            margin: auto;
+            margin-top: 23px;
+            font-family: 'Architects Daughter', cursive;
+            
+        }
+        .right{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            display: inline-block;
+        }
+        .nav{
+            list-style: none;
+        }
+        .nav li{
+            display: inline;
+        }
+        .nav li a{
+            color: aliceblue;
+            text-decoration: none;
+            padding: 3px 20px;
+        }
+        .nav li a:hover,
+    .nav li a.active
+        {
+            color: rgb(40, 187, 197);
+        }
+        .search{
+            margin: 9px -1px;
+            background-color: transparent;
+            border-color: aliceblue;
+        }
+        .btn{
+            margin: 5px 5px;
+            background-color: transparent;
+            border-color: aliceblue;
+            color: aliceblue;
+            font-family: 'Architects Daughter', cursive;
+            cursor: pointer;
+        }
+        .btn:hover{
+            border-color: gray;
+        }
+        .text{
+            text-align: center;
+            margin: 182px 450px;
+            padding: 0px 0px;
+            font-size: 94px;
+            font-family: 'Architects Daughter', cursive;
+        }
+        .text2{
+            text-align: center;
+            margin: -179px 558px;
+            padding: 0px 0px;
+            font-size: 25px;
+            font-family: 'Architects Daughter', cursive;
+        }
+        input{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <header class="main">
+        <div class="left">
+            <img src="data:image/jpeg;base64,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" alt="">
+             <div>BERU FRESH</div>
+        </div>
+        <div class="mid">
+            <ul class="nav">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">POLICY</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <input type="text" class="search">
+            <button class="btn">Go</button>
+        </div>
+        <div class="text">BERU FRESH</div>
+        <div class="text2">YOUR NEW CLEANMATE</div>
+    </header>
+</body>
+</html>
